@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Platforms>x64</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Title>AbioticSavePlatformConverter</Title>
+    <Product>AbioticSavePlatformConverter</Product>
+	<ProductName>AbioticSavePlatformConverter</ProductName>
+    <Description>Converts Abiotic Factor game saves between platforms</Description>
+    <Company>Crystal</Company>
+    <Authors>Crystal Ferrai</Authors>
+    <Copyright>Copyright © 2025 Crystal Ferrai</Copyright>
+	<Version>1.0.0.0</Version>
+	<ProductVersion>$(Version)</ProductVersion>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <FileVersion>$(Version)</FileVersion>
+	<InformationalVersion>$(Version)</InformationalVersion>
+	<IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EpicGames.Oodle\EpicGames.Oodle.csproj" />
+    <ProjectReference Include="..\UeSaveGame\UeSaveGame\UeSaveGame.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\SaveHeader.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
