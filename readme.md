@@ -80,7 +80,7 @@ AbioticSavePlatformConverter --in "%UserProfile%\Desktop\InputSaves" --out "%Use
 **Linux**
 
 ```
-dotnet AbioticSavePlatformConverter.dll --in "%UserProfile%\Desktop\InputSaves" --out "%UserProfile%\Desktop\OutputSaves"
+dotnet AbioticSavePlatformConverter.dll --in "~/InputSaves" --out "~/OutputSaves"
 ```
 
 Make sure it says "Conversion successful" when it is done. If there are errors, you will need to address them and try again.
