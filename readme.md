@@ -61,11 +61,11 @@ If you have an XBox or Microsoft store save that is not connected to your profil
 
 If the save file is zipped, you will first want to extract it somewhere you can find it. If it is already extracted, then copy the folder path to use in step 3. Make sure the path you copy contains a `containers.index` file along with one or more folders that have long machine names.
 
-For this example, we will assume the input saves are extracted to a folder on the desktop named `InputSave` (or in our home diretory if on Linux) which directly contains the `containers.index` file and related folders.
+For this example, we will assume the input saves are extracted to a folder on the desktop named `InputSave` (or in our home directory if on Linux) which directly contains the `containers.index` file and related folders.
 
 #### Step 2: Create an output folder
 
-Create an empty folder somewhere on your PC where the converted save files can be stored. For this example, we will make a folder on our desktop named `OutputSave` (or in our home diretory if on Linux).
+Create an empty folder somewhere on your PC where the converted save files can be stored. For this example, we will make a folder on our desktop named `OutputSave` (or in our home directory if on Linux).
 
 #### Step 3: Run the conversion
 
