@@ -69,10 +69,18 @@ Create an empty folder somewhere on your PC where the converted save files can b
 
 #### Step 3: Run the conversion
 
-Using the information you have from the previous steps, run AbioticSavePlatformConverter again with the following options, substituting your input and output paths.
+Using the information you have from the previous steps, run AbioticSavePlatformConverter with the following options, substituting your input and output paths.
+
+**Windows**
 
 ```
 AbioticSavePlatformConverter --in "%UserProfile%\Desktop\InputSaves" --out "%UserProfile%\Desktop\OutputSaves"
+```
+
+**Linux**
+
+```
+dotnet AbioticSavePlatformConverter.dll --in "%UserProfile%\Desktop\InputSaves" --out "%UserProfile%\Desktop\OutputSaves"
 ```
 
 Make sure it says "Conversion successful" when it is done. If there are errors, you will need to address them and try again.
