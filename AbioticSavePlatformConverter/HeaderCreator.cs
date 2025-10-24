@@ -57,7 +57,7 @@ namespace AbioticSavePlatformConverter
 			string outPath;
 			try
 			{
-				outPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!, "Resources\\SaveHeader.dat");
+				outPath = Path.GetFullPath(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!, "Resources/SaveHeader.dat"));
 				using FileStream file = File.Create(outPath);
 				using BinaryWriter writer = new(file);
 

@@ -165,7 +165,7 @@ namespace AbioticSavePlatformConverter
 				return false;
 			}
 
-			string headerPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!, "Resources\\SaveHeader.dat");
+			string headerPath = Path.GetFullPath(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!, "Resources/SaveHeader.dat"));
 			if (!File.Exists(headerPath))
 			{
 				logger.Error($"Could not locate save header resource at '{headerPath}'");
@@ -246,7 +246,7 @@ namespace AbioticSavePlatformConverter
 
 		private static string GetXboxSaveFolder()
 		{
-			return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Packages\\PlayStack.AbioticFactor_3wcqaesafpzfy\\SystemAppData\\wgs");
+			return Path.GetFullPath(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Packages/PlayStack.AbioticFactor_3wcqaesafpzfy/SystemAppData/wgs"));
 		}
 	}
 }

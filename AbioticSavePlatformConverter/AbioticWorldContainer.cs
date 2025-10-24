@@ -105,12 +105,12 @@ namespace AbioticSavePlatformConverter
 						string inPath = Path.GetFullPath(header.Path);
 						if (File.Exists(inPath))
 						{
-							outPath = Path.Combine(directory, profileFolder, inPath.Substring(inPath.IndexOf("\\Profile\\") + 9));
+							outPath = Path.Combine(directory, profileFolder, inPath.Substring(inPath.IndexOf($"{Path.DirectorySeparatorChar}Profile{Path.DirectorySeparatorChar}") + 9));
 							File.Copy(inPath, outPath);
 						}
 						else
 						{
-							logger.Warning($"Unable to include SandboxSettings.ini because input file is not accessible at: {inPath}");
+							logger.Warning($"Unable to include SandboxSettings.ini because input file is not accessible at: {header.Path}");
 						}
 					}
 
