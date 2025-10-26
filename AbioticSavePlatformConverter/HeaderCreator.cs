@@ -62,7 +62,7 @@ namespace AbioticSavePlatformConverter
 				using BinaryWriter writer = new(file);
 
 				save.WritePart(SaveGamePart.Magic, writer);
-				save.WritePart(SaveGamePart.Header, writer);
+				save.WritePart(SaveGamePart.Versions, writer);
 				save.WritePart(SaveGamePart.CustomFormats, writer);
 			}
 			catch (Exception ex)
