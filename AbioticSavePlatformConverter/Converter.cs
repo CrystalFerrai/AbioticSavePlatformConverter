@@ -74,7 +74,13 @@ namespace AbioticSavePlatformConverter
 				foreach (string profileDir in Directory.GetDirectories(saveFolder))
 				{
 					string profileId = Path.GetFileName(profileDir);
-					profileId = profileId[..profileId.IndexOf('_')].TrimStart('0');
+					int separatorIndex = profileId.IndexOf('_');
+					if (separatorIndex < 0)
+					{
+						logger.Debug($"Unknown folder name found in profile saves: {profileId}");
+						continue;
+					}
+					profileId = profileId[..separatorIndex].TrimStart('0');
 
 					XBoxContainerIndex containerIndex;
 					try
